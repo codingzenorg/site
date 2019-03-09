@@ -27,7 +27,7 @@ after_success: |
     # push only if "git commit" succeeded
     if [ $? -eq 0 ]; then
       echo "pushing...."
-      #git remote rm origin
+      git remote rm origin
       git remote add origin https://henriquericcio:${GH_TOKEN}@github.com/codingzenorg/site.git > /dev/null 2>&1
       git push origin master --quiet
     else
