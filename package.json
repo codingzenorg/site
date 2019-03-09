@@ -7,7 +7,7 @@
     "start": "live-server",
     "build": "gulp",
     "opt": "http-server ./dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,9 @@
   "author": "henrique.riccio@gmail.com",
   "license": "",
   "homepage": "https://codingzen.org",
+  "dependencies": {
+    "idate": "file:./apps/idate"
+  },
   "devDependencies": {
     "del": "^3.0.0",
     "gulp": "^3.9.1",
