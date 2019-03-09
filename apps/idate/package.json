@@ -12,9 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@hyperapp/logger": "^0.5.0",
-    "hyperapp": "^1.2.9"
-  },
-  "devDependencies": {
+    "hyperapp": "^1.2.9",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-hyperapp": "^2.3.0",
