@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html --open",
-    "postinstall": "parcel build index.html --experimental-scope-hoisting"
+    "postinstall": "parcel build index.html --public-url . --experimental-scope-hoisting"
   },
   "keywords": [],
   "author": "henrique.riccio@gmail.com",
