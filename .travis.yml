@@ -15,8 +15,8 @@ node_js:
 after_success: |
   if [ -n "$GITHUB_TOKEN" ]; then
     #configure
-    git config user.name "travis@travis-ci.org"
-    git config user.email "Travis CI"
+    git config user.name "deploy@travis-ci.org"
+    git config user.email "Deployment User Script"
     #
     git checkout -q master
     #list of staged files
@@ -28,7 +28,7 @@ after_success: |
     if [ $? -eq 0 ]; then
       echo "pushing...."
       #git remote rm origin
-      git remote add origin https://henriquericcio:$GITHUB_TOKEN@github.com/codingzenorg/site.git > /dev/null 2>&1
+      git remote add origin https://henriquericcio:${GH_TOKEN}@github.com/codingzenorg/site.git > /dev/null 2>&1
       git push origin master --quiet
     else
       echo "No changes. Nothing to do"
