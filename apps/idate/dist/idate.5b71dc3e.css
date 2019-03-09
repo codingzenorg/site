@@ -1,0 +1,1 @@
+.todos{margin:auto}ul{padding:0;position:relative;width:50%}ul li{color:#000;border-left:8px solid orange;background:#f5f5f5;margin-bottom:5px;line-height:1.5;border-radius:0 15px 15px 0;padding:.5em;list-style-type:none!important}li.checked{opacity:.5}button{display:none}button.checked{display:inline}
