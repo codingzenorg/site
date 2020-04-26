@@ -8,17 +8,17 @@
     "postinstall": "parcel build index.html --public-url . --experimental-scope-hoisting"
   },
   "keywords": [],
-  "author": "henrique.riccio@gmail.com",
-  "license": "ISC",
+  "author": "Henrique Riccio <henrique.riccio@gmail.com>",
+  "license": "Creative Commons Attribution 4.0 International License",
   "dependencies": {
+    "@hyperapp/logger": "^0.5.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-hyperapp": "^2.3.0",
+    "hyperapp": "^1.2.9",
     "node-sass": "^4.11.0",
     "parcel": "^1.12.0",
-    "parcel-bundler": "^1.12.0",
-    "parcel-plugin-bundle-visualiser": "^1.2.0",
-    "hyperapp": "^1.2.9",
-    "@hyperapp/logger": "^0.5.0"
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-bundle-visualiser": "^1.2.0"
   }
 }

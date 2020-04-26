@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: 'Work Sans', sans-serif;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(169, 235, 63, 255);
   background-image: url("./images/green.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -63,8 +63,6 @@ footer {
 /* nav */
 .logo {
   grid-column: 1;
-  #float: left;
-  #width: 140px;
   margin-left: 10px;
   margin-top: 03px;
 }
@@ -81,13 +79,9 @@ footer {
 
 .navbar-itens {
   grid-column: 3;
-  #display: inline-block;
-  #float: right;
-  #background-color: red;
 }
 
 nav a {
-  #float: left;
   float: right;
   display: block;
   color: #124019;
@@ -105,9 +99,11 @@ nav a:hover {
   color: #124019;
   padding: 15px;
   margin-left: 10%;
-  margin-top: 150px;
-  margin-bottom: 150px;
-  font-size: 6em;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  font-family: 'Arizonia'; 
+  font-size: 4em; 
+  font-weight: normal;
 }
 
 /* articles */

@@ -10,6 +10,7 @@
   <link rel="icon" href="images/favicon.png">
   <title>codingzen</title>
   <link rel="stylesheet" href="main.css">
+  <link href='https://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet'>
 </head>
 
 <body>
@@ -21,21 +22,18 @@
 
   <nav>
     <img class="logo" src="images/path4240_1.png" style="max-width:40px;" alt="">
-    <div class="navbar-search">
-      <input type="text" placeholder="search...."></input>
-    </div>
     <div class="navbar-itens">
       <a href="#">about</a>
     </div>
   </nav>
   <div id="site">
     <header>
-      <h1 class="page-title">coding, zen and everything</h1>
+      <h1 class="page-title">“I only achieve simplicity with enormous effort”<br>Clarice Linspector</h1>
     </header>
     <main>
       <article class="even">
         <h2>shesha</h2>
-        <img src="images/shesha.png" alt="" style="float:left;margin-right:50px;"/>
+        <img src="images/shesha.gif" alt="" style="float:left;margin-right:50px;"/>
         <p>An essay inspirated in past memories about a famous DOS game: <a href="https://en.wikipedia.org/wiki/Nibbles_(video_game)">nibbles</a>.</p>
         <ul>
           <li>Status: active</li>
@@ -46,34 +44,42 @@
         </ul>
       </article>
       <article class="odd">
-        <h2>shesha</h2>
-        <img src="images/shesha.png" alt="" style="float:left;margin-right:50px;"/>
-        <p>An essay inspirated in past memories about a famous DOS game: <a href="https://en.wikipedia.org/wiki/Nibbles_(video_game)">nibbles</a>.</p>
+        <h2>next</h2>
+        <img src="images/none.png" alt="" style="float:left;margin-right:50px;"/>
+        <p>Something cool</p>
         <ul>
           <li>Status: active</li>
-          <li><a href="https://github.com/codingzenorg/site/tree/master/shesha">Source</a></li>
-          <li><a href="shesha/">Live</a></li>
+          <li><a href="">Source</a></li>
+          <li><a href="">Live</a></li>
           <li>Created: 20180101</li>
           <li>Last Updated: 20180101</li>
         </ul>
       </article>
       <article class="even">
-        <h2>shesha</h2>
-        <img src="images/shesha.png" alt="" style="float:left;margin-right:50px;"/>
-        <p>An essay inspirated in past memories about a famous DOS game: <a href="https://en.wikipedia.org/wiki/Nibbles_(video_game)">nibbles</a>.</p>
+        <h2>and next</h2>
+        <img src="images/none.png" alt="" style="float:left;margin-right:50px;"/>
+        <p>Something coolest</p>
         <ul>
-          <li>Status: active</li>
-          <li><a href="https://github.com/codingzenorg/site/tree/master/shesha">Source</a></li>
-          <li><a href="shesha/">Live</a></li>
-          <li>Created: 20180101</li>
-          <li>Last Updated: 20180101</li>
+          <li>Status: to be created</li>
+          <li><a href="">Source</a></li>
+          <li><a href="">Live</a></li>
+          <li>Created: not applicable</li>
+          <li>Last Updated: not applicable</li>
         </ul>
       </article>
     </main>
     <footer>
-      <p>© codingzen 2018</p>
+      <div style="float: right; padding-right: 10px; text-align: right; font-size: xx-small;">
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+        <br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+      </div>
+      <div style="float: left; padding-left: 10px; font-size: xx-small; align-items: center; display: flex;">
+        <p id="version"></p>
+      </div>
     </footer>
   </div>
 </body>
-
+<script>
+  document.getElementById('version').innerHTML = "v" + Math.floor((new Date().getTime() - new Date(2016, 0, 16, 4, 25, 0).getTime())/86400000)
+</script>
 </html>

@@ -4,9 +4,7 @@
   "private": true,
   "description": "codingzen static site",
   "scripts": {
-    "start": "live-server",
-    "build": "gulp",
-    "opt": "http-server ./dist",
+    "start": "live-server --no-css-inject",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
@@ -14,18 +12,10 @@
     "url": "https://github.com/codingzenorg/site.git"
   },
   "keywords": [],
-  "author": "henrique.riccio@gmail.com",
-  "license": "",
+  "author": "Henrique Riccio <henrique.riccio@gmail.com>",
+  "license": "Creative Commons Attribution 4.0 International License",
   "homepage": "https://codingzen.org",
-  "dependencies": {
-    "idate": "file:./apps/idate"
-  },
   "devDependencies": {
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.10.0",
-    "gulp-htmlmin": "^4.0.0",
-    "gulp-svgmin": "^2.0.0",
-    "run-sequence": "^2.2.1"
+    "live-server": "^1.2.1"
   }
 }
