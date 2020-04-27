@@ -33,7 +33,7 @@ const board = {
 		this.width = Math.floor(coordinate.width / this.cellSize)
 		this.height = Math.floor(coordinate.height / this.cellSize)
 	},
-	backcolor = 'black'
+	backcolor: 'black'
 }
 
 const snake = {
