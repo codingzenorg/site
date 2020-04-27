@@ -16,8 +16,7 @@
   "license": "Creative Commons Attribution 4.0 International License",
   "homepage": "https://codingzen.org",
   "dependencies": {
-    "idate": "file:./src/idate",
-    "shesha": "file:./src/shesha"
+    "idate": "file:./src/idate"
   },
   "devDependencies": {
     "live-server": "^1.2.1"
