@@ -20,7 +20,7 @@ after_success: |
     #
     git checkout -q master
     #list of staged files
-    git add -f apps/idate/dist/*
+    git add -f apps/idate/*
     #
     git commit -m "Travis update: `date "+%b %Y"` (Build $TRAVIS_BUILD_NUMBER)" -m "[skip ci]"
 

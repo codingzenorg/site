@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html --open",
-    "postinstall": "parcel build index.html --public-url . --experimental-scope-hoisting"
+    "postinstall": "parcel build index.html --public-url . --experimental-scope-hoisting --out-dir ../../apps/idate"
   },
   "keywords": [],
   "author": "Henrique Riccio <henrique.riccio@gmail.com>",
