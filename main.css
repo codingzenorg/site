@@ -56,6 +56,27 @@ main {
   grid-gap: 10px;
 }
 
+@media screen and (min-width:800px) {
+  main {
+    grid-area: c;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+  }
+}
+
+
+@media screen and (min-width:1200px) {
+  main {
+    grid-area: c;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+  }
+}
+
 footer {
   grid-area: f;
 }
@@ -97,37 +118,61 @@ nav a:hover {
 /* title */
 .page-title {
   color: #124019;
-  padding: 15px;
-  margin-left: 10%;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  font-family: 'Arizonia'; 
-  font-size: 4em; 
+  font-size: 4em;
   font-weight: normal;
 }
 
 /* articles */
 article {
-  padding: 50px;
-  padding-top: 20px;
-  font-size: 1.3em;
-  line-height: 1.3em;
+  padding: 20px;
+  position: relative;
+}
+
+article:hover {
+    opacity: 0.8;
+    cursor: pointer;
+
+}
+
+article.even {
+  background: white;
+
+}
+
+article.odd {
+  background: #124019;
+  position: relative;
 }
 
 article h2 {
   color: #66a241;
+  padding-top: 50%;
   padding-bottom: 10px;
 }
 
-article.even {
-  color: black;
-  background: white;
+article img {
+  width: 100%;
 }
 
-article.odd {
+/*div over*/
+.over{
+  width:80%;
+  height: 80%;
+  font-size: 120%;
   color: white;
-  background: #124019;
+  float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  padding: 10%;
+  opacity: 0;
 }
+
+.over:hover{
+  opacity: 1;
+}
+
 
 /* footer */
 footer {
