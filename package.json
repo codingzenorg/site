@@ -12,13 +12,10 @@
     "url": "https://github.com/codingzenorg/site.git"
   },
   "keywords": [],
-  "author": "Henrique Riccio <henrique.riccio@gmail.com>",
+  "author": "hriccio <hriccio@codingzen.org>",
   "license": "Creative Commons Attribution 4.0 International License",
   "homepage": "https://codingzen.org",
-  "dependencies": {
-    "shesha": "file:./src/shesha"
-  },
   "devDependencies": {
-    "live-server": "^1.2.1"
+    "live-server": "^1.2.2"
   }
 }
