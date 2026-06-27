@@ -4,13 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="software essays">
+  <meta name="description" content="AI-assisted game prototypes and canvas experiments from codingzen.">
   <meta name="author" content="hriccio@codingzen.org">
   <meta property="og:image" content="https://codingzen.org/images/codingzen_facebook_201809.png" />
   <link rel="icon" href="images/favicon.png">
-  <title>codingzen</title>
+  <title>codingzen | AI-assisted game lab</title>
   <link rel="stylesheet" href="main.css">
-  <link href='https://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -21,58 +23,100 @@
   <![endif]-->
 
   <nav>
-    <img class="logo" src="images/path4240_1.png" style="max-width:40px;" alt="">
+    <a class="brand" href="#site" aria-label="codingzen home">
+      <img class="logo" src="images/path4240_1.png" alt="codingzen mark">
+      <span>codingzen</span>
+    </a>
+    <div class="navbar-copy">AI-assisted prototypes, canvas experiments, and game sketches.</div>
     <div class="navbar-itens">
-      <a href="#">about</a>
+      <a href="#process">process</a>
     </div>
   </nav>
   <div id="site">
     <header>
-      <h1 class="page-title"></h1>
+      <section class="hero">
+        <div class="eyebrow">AI-assisted game lab</div>
+        <h1 class="page-title">Interactive sketches built with canvas, curiosity, and AI.</h1>
+        <p class="hero-copy">
+          codingzen is a small repository for prototypes where ideas are shaped with
+          generated concepts, rapid iteration, and plain JavaScript on top of the canvas API.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#featured">view featured prototype</a>
+          <a class="button secondary" href="#process">how it is built</a>
+        </div>
+        <div class="hero-pills" id="process">
+          <span>canvas-first</span>
+          <span>AI-assisted ideation</span>
+          <span>fast playable loops</span>
+        </div>
+      </section>
     </header>
     <main>
-      <article class="even">
-        <img src="images/shesha.gif" alt="" style="width: 100%;"/>
-
-        <div class="over" onclick="window.open('apps/shesha/');">
-          <h2>shesha</h2>
-
-          <p>An essay inspirated in past memories about a famous DOS game: <a href="https://en.wikipedia.org/wiki/Nibbles_(video_game)">nibbles</a>.</p>
+      <article class="project featured" id="featured">
+        <a class="project-link" href="apps/shesha/">
+          <div class="project-media">
+            <img src="images/shesha.gif" alt="Animated preview of the shesha prototype">
+            <span class="project-badge">featured</span>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-kind">canvas game</span>
+              <span class="project-status">playable</span>
+            </div>
+            <h2>shesha</h2>
+            <p>
+              A modernized take on the old Nibbles-style loop, drafted from memory and then refined with AI-assisted iteration.
+            </p>
+          </div>
+        </a>
+      </article>
+      <article class="project">
+        <div class="project-link" aria-disabled="true">
+          <div class="project-media empty">
+            <img src="images/none.png" alt="">
+            <span class="project-badge muted">in progress</span>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-kind">prompt sketch</span>
+              <span class="project-status">planning</span>
+            </div>
+            <h2>mechanics studies</h2>
+            <p>Short experiments that start as prompts, rough notes, and tiny playable loops.</p>
+          </div>
         </div>
       </article>
-      <article class="odd">
-        <img src="images/none.png" alt=""/>
-        <div class="over" onclick="alert('not yet');">
-          <h2>next</h2>
-          <p>Something cool</p>
+      <article class="project">
+        <div class="project-link" aria-disabled="true">
+          <div class="project-media empty">
+            <img src="images/none.png" alt="">
+            <span class="project-badge muted">in progress</span>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-kind">ai-assisted art</span>
+              <span class="project-status">drafting</span>
+            </div>
+            <h2>visual direction</h2>
+            <p>Testing palettes, screens, and motion ideas before the next prototype ships.</p>
+          </div>
         </div>
       </article>
-      <article class="even">
-        <img src="images/none.png" alt=""/>
-        <div class="over" onclick="alert('not yet');">
-          <h2>next</h2>
-          <p>Something cool</p>
-        </div>
-      </article>
-      <article class="odd">
-        <img src="images/none.png" alt=""/>
-        <div class="over" onclick="alert('not yet');">
-          <h2>next</h2>
-          <p>Something cool</p>
-        </div>
-      </article>
-      <article class="even">
-        <img src="images/none.png" alt=""/>
-        <div class="over" onclick="alert('not yet');">
-          <h2>next</h2>
-          <p>Something cool</p>
-        </div>
-      </article>
-      <article class="odd">
-        <img src="images/none.png" alt="" />
-        <div class="over" onclick="alert('not yet');">
-          <h2>next</h2>
-          <p>Something cool</p>
+      <article class="project">
+        <div class="project-link" aria-disabled="true">
+          <div class="project-media empty">
+            <img src="images/none.png" alt="">
+            <span class="project-badge muted">in progress</span>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-kind">tooling</span>
+              <span class="project-status">research</span>
+            </div>
+            <h2>build notes</h2>
+            <p>Capturing what works when a human taste-checks AI output and keeps the result playable.</p>
+          </div>
         </div>
       </article>
     </main>
