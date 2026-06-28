@@ -31,6 +31,14 @@ jobs:
           path: .external/shesha
           token: ${{ secrets.SHESHA_REPO_TOKEN || github.token }}
 
+      - name: Check out first-fire
+        uses: actions/checkout@v5
+        with:
+          repository: codingzenorg/first-fire
+          ref: main
+          path: .external/first-fire
+          token: ${{ secrets.FIRST_FIRE_REPO_TOKEN || github.token }}
+
       - name: Set up Node
         uses: actions/setup-node@v5
         with:
@@ -44,6 +52,15 @@ jobs:
 
       - name: Stage shesha app
         run: npm run stage:shesha
+
+      - name: Build first-fire
+        working-directory: .external/first-fire
+        run: |
+          npm ci
+          npm run build
+
+      - name: Stage first-fire app
+        run: npm run stage:first-fire
 
       - name: Build site
         run: |
