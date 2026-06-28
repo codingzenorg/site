@@ -18,12 +18,4 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    groups:
-      minor-and-patch:
-        applies-to: version-updates
-        patterns:
-          - "*"
-        update-types:
-          - "minor"
-          - "patch"
     open-pull-requests-limit: 5
