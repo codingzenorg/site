@@ -91,5 +91,12 @@
 <script>
   document.getElementById('version').innerHTML = "v" + Math.floor((new Date().getTime() - new Date(2016, 0, 16, 4, 25, 0).getTime())/86400000)
 </script>
+<script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.185.0/build/three.module.js"
+    }
+  }
+</script>
 <script type="module" src="/src/main.js"></script>
 </html>
