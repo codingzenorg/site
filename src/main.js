@@ -16,6 +16,20 @@ const phases = [
     open: true,
   },
   {
+    id: "first-fire",
+    title: "first fire",
+    kind: "canvas game",
+    status: "playable",
+    world: "ember ridge",
+    description:
+      "A fire-starting arena from the sibling `first-fire` build, staged here as the next playable phase in the overworld.",
+    href: "apps/first-fire/",
+    github: "https://github.com/codingzenorg/first-fire",
+    position: new THREE.Vector3(-2.1, 0.46, 1.05),
+    color: 0xffc25e,
+    open: true,
+  },
+  {
     id: "mechanics",
     title: "mechanics studies",
     kind: "prompt sketch",
