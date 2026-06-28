@@ -17,12 +17,12 @@ const phases = [
   },
   {
     id: "first-fire",
-    title: "first fire",
-    kind: "canvas game",
+    title: "first-fire",
+    kind: "rts prototype",
     status: "playable",
-    world: "ember ridge",
+    world: "ember frontier",
     description:
-      "A fire-starting arena from the sibling `first-fire` build, staged here as the next playable phase in the overworld.",
+      "A gather-build-train-fight strategy prototype from the sibling `first-fire` project, staged here as the second playable phase in the overworld.",
     href: "apps/first-fire/",
     github: "https://github.com/codingzenorg/first-fire",
     position: new THREE.Vector3(-2.1, 0.46, 1.05),
