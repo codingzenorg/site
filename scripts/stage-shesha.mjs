@@ -1,4 +1,4 @@
-import { cp, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
+import { cp, mkdir, readdir, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
 const sourceDir = process.argv[2] || '.external/shesha/dist';
@@ -7,7 +7,14 @@ const targetDir = process.argv[3] || 'apps/shesha';
 await rm(targetDir, { recursive: true, force: true });
 await mkdir(targetDir, { recursive: true });
 
-for (const entry of await readdir(sourceDir, { withFileTypes: true })) {
+const entries = await readdir(sourceDir, { withFileTypes: true });
+const bundleEntry = entries.find((entry) => entry.isFile() && entry.name.endsWith('.js') && !entry.name.endsWith('.js.map'));
+
+if (!bundleEntry) {
+  throw new Error(`Could not find a Shesha bundle in ${sourceDir}`);
+}
+
+for (const entry of entries) {
   if (entry.name === 'index.html') {
     continue;
   }
@@ -16,15 +23,6 @@ for (const entry of await readdir(sourceDir, { withFileTypes: true })) {
     recursive: entry.isDirectory(),
   });
 }
-
-const sourceIndex = await readFile(path.join(sourceDir, 'index.html'), 'utf8');
-const scriptMatch = sourceIndex.match(/<script\b[^>]*\bsrc=["']([^"']+\.js)["'][^>]*><\/script>/i);
-
-if (!scriptMatch) {
-  throw new Error(`Could not find Shesha bundle script in ${path.join(sourceDir, 'index.html')}`);
-}
-
-const bundleScript = scriptMatch[1].replace(/^\.\//, '');
 
 await writeFile(
   path.join(targetDir, 'index.html'),
@@ -65,7 +63,7 @@ await writeFile(
   <script>
     document.getElementById('root-return').href = sessionStorage.getItem('codingzen:return-root') || '../../';
   </script>
-  <script src="${bundleScript}"></script>
+  <script src="${bundleEntry.name}"></script>
 </body>
 
 </html>
