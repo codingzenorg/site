@@ -4,7 +4,10 @@
   "private": true,
   "description": "codingzen static site",
   "scripts": {
-    "start": "http-server",
+    "start": "vite --host 0.0.0.0",
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build && cp -R apps dist/apps && cp CNAME dist/CNAME",
+    "preview": "vite preview --host 0.0.0.0",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
@@ -16,6 +19,10 @@
   "license": "Creative Commons Attribution 4.0 International License",
   "homepage": "https://codingzen.org",
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "vite": "^8.1.0"
+  },
+  "dependencies": {
+    "three": "^0.185.0"
   }
 }

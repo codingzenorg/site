@@ -22,103 +22,60 @@
   </div>
   <![endif]-->
 
-  <nav>
-    <a class="brand" href="#site" aria-label="codingzen home">
+  <a class="world-brand" href="#site" aria-label="codingzen home">
       <img class="logo" src="images/path4240_1.png" alt="codingzen mark">
       <span>codingzen</span>
-    </a>
-    <div class="navbar-copy">AI-assisted prototypes, canvas experiments, and game sketches.</div>
-    <div class="navbar-itens">
-      <a href="#process">process</a>
-    </div>
-  </nav>
+  </a>
   <div id="site">
-    <header>
-      <section class="hero">
-        <div class="eyebrow">AI-assisted game lab</div>
-        <h1 class="page-title">Interactive sketches built with canvas, curiosity, and AI.</h1>
-        <p class="hero-copy">
-          codingzen is a small repository for prototypes where ideas are shaped with
-          generated concepts, rapid iteration, and plain JavaScript on top of the canvas API.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#featured">view featured prototype</a>
-          <a class="button secondary" href="#process">how it is built</a>
-        </div>
-        <div class="hero-pills" id="process">
-          <span>canvas-first</span>
-          <span>AI-assisted ideation</span>
-          <span>fast playable loops</span>
-        </div>
-      </section>
-    </header>
     <main>
-      <article class="project featured" id="featured">
-        <a class="project-link" href="apps/shesha/">
-          <div class="project-media">
-            <img src="images/shesha.gif" alt="Animated preview of the shesha prototype">
-            <span class="project-badge">featured</span>
+      <section class="world-shell" id="world-map" aria-labelledby="world-map-title">
+        <div class="world-copy">
+          <div class="eyebrow">AI-assisted game lab</div>
+          <h1 id="world-map-title">codingzen overworld</h1>
+          <p>
+            Browse playable prototypes as a low-poly game map. Pick a phase to inspect
+            details, then open it when the path is unlocked.
+          </p>
+          <div class="hero-pills" id="process">
+            <span>canvas-first</span>
+            <span>AI-assisted ideation</span>
+            <span>fast playable loops</span>
           </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span class="project-kind">canvas game</span>
-              <span class="project-status">playable</span>
-            </div>
-            <h2>shesha</h2>
-            <p>
+        </div>
+        <div class="world-stage">
+          <div class="map-panel">
+            <canvas id="game-map" aria-label="3D low-poly gallery map"></canvas>
+            <div class="map-hint">Click a node, or use arrow keys and Enter.</div>
+          </div>
+          <aside class="phase-panel" aria-live="polite">
+            <div class="phase-status" id="phase-status">playable</div>
+            <h3 id="phase-title">shesha</h3>
+            <p id="phase-description">
               A modernized take on the old Nibbles-style loop, drafted from memory and then refined with AI-assisted iteration.
             </p>
-          </div>
-        </a>
-      </article>
-      <article class="project">
-        <div class="project-link" aria-disabled="true">
-          <div class="project-media empty">
-            <img src="images/none.png" alt="">
-            <span class="project-badge muted">in progress</span>
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span class="project-kind">prompt sketch</span>
-              <span class="project-status">planning</span>
-            </div>
-            <h2>mechanics studies</h2>
-            <p>Short experiments that start as prompts, rough notes, and tiny playable loops.</p>
-          </div>
+            <dl class="phase-meta">
+              <div>
+                <dt>type</dt>
+                <dd id="phase-kind">canvas game</dd>
+              </div>
+              <div>
+                <dt>world</dt>
+                <dd id="phase-world">snake garden</dd>
+              </div>
+              <div>
+                <dt>source</dt>
+                <dd><a id="phase-github" href="https://github.com/codingzenorg/site/tree/master/apps/shesha" target="_blank" rel="noopener noreferrer">github</a></dd>
+              </div>
+            </dl>
+            <a class="button primary phase-open" id="phase-open" href="apps/shesha/">open phase</a>
+          </aside>
         </div>
-      </article>
-      <article class="project">
-        <div class="project-link" aria-disabled="true">
-          <div class="project-media empty">
-            <img src="images/none.png" alt="">
-            <span class="project-badge muted">in progress</span>
+        <noscript>
+          <div class="fallback-list">
+            <a href="apps/shesha/">Open shesha</a>
           </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span class="project-kind">ai-assisted art</span>
-              <span class="project-status">drafting</span>
-            </div>
-            <h2>visual direction</h2>
-            <p>Testing palettes, screens, and motion ideas before the next prototype ships.</p>
-          </div>
-        </div>
-      </article>
-      <article class="project">
-        <div class="project-link" aria-disabled="true">
-          <div class="project-media empty">
-            <img src="images/none.png" alt="">
-            <span class="project-badge muted">in progress</span>
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span class="project-kind">tooling</span>
-              <span class="project-status">research</span>
-            </div>
-            <h2>build notes</h2>
-            <p>Capturing what works when a human taste-checks AI output and keeps the result playable.</p>
-          </div>
-        </div>
-      </article>
+        </noscript>
+      </section>
     </main>
     <footer>
       <div style="float: right; padding-right: 10px; text-align: right; font-size: xx-small;">
@@ -134,4 +91,5 @@
 <script>
   document.getElementById('version').innerHTML = "v" + Math.floor((new Date().getTime() - new Date(2016, 0, 16, 4, 25, 0).getTime())/86400000)
 </script>
+<script type="module" src="/src/main.js"></script>
 </html>
