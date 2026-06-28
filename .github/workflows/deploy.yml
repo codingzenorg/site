@@ -21,10 +21,10 @@ jobs:
 
     steps:
       - name: Check out site
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Check out shesha
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: codingzenorg/shesha
           ref: main
@@ -32,7 +32,7 @@ jobs:
           token: ${{ secrets.SHESHA_REPO_TOKEN || github.token }}
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 22
 
@@ -51,7 +51,7 @@ jobs:
           npm run build
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
@@ -65,4 +65,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
