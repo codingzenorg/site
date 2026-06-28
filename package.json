@@ -6,6 +6,7 @@
   "scripts": {
     "start": "vite --host 0.0.0.0",
     "dev": "vite --host 0.0.0.0",
+    "stage:shesha": "node scripts/stage-shesha.mjs",
     "build": "vite build && cp -R apps dist/apps && cp CNAME dist/CNAME",
     "preview": "vite preview --host 0.0.0.0",
     "test": "echo \"Error: no test specified\" && exit 0"

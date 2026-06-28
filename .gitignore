@@ -1,5 +1,7 @@
 *\node_modules
 *\report.html
+node_modules/
+dist/
 
 # ide
 .idea
