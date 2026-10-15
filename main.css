@@ -667,3 +667,57 @@ footer a {
     grid-template-columns: 1fr;
   }
 }
+
+/* CodingZen Flow introduction and channel navigation. */
+.world-brand .logo {
+  width: 160px;
+  height: auto;
+}
+
+.world-copy h1 {
+  max-width: 18ch;
+  font-size: clamp(1.7rem, 2.8vw, 2.6rem);
+  line-height: 1.05;
+}
+
+.world-copy h2 {
+  margin: 0.4rem 0 0;
+  font-size: 1.1rem;
+}
+
+.channel-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.channel-links a {
+  color: var(--accent-strong);
+  text-underline-offset: 0.2em;
+}
+
+a:focus-visible,
+#game-map:focus-visible {
+  outline: 3px solid var(--accent-strong);
+  outline-offset: 4px;
+}
+
+#game-map:focus-visible {
+  outline-offset: -5px;
+}
+
+@media screen and (max-width: 980px) {
+  .world-copy .brand-intro {
+    display: block;
+  }
+}
+
+.world-shell {
+  width: 100%;
+}
+
+.map-hint {
+  font-size: 0.68rem;
+}

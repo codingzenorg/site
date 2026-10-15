@@ -10,7 +10,7 @@ const phases = [
     description:
       "A modernized take on the old Nibbles-style loop, drafted from memory and then refined with AI-assisted iteration.",
     href: "apps/shesha/",
-    github: "https://github.com/codingzenorg/site/tree/master/apps/shesha",
+    github: "https://github.com/codingzenorg/shesha",
     position: new THREE.Vector3(-4.4, 0.42, 2.2),
     color: 0x9cff57,
     open: true,
@@ -400,7 +400,8 @@ canvas.addEventListener("pointerdown", (event) => {
   }
 });
 
-window.addEventListener("keydown", (event) => {
+canvas.addEventListener("keydown", (event) => {
+  if (["ArrowRight", "ArrowDown", "ArrowLeft", "ArrowUp", "Enter"].includes(event.key)) event.preventDefault();
   if (event.key === "ArrowRight" || event.key === "ArrowDown") {
     setSelectedPhase(selectedIndex + 1);
   }

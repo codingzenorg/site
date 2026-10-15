@@ -4,11 +4,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AI-assisted game prototypes and canvas experiments from codingzen.">
+  <meta name="description" content="Interactive experiments, simulations, visualizations, and playable projects.">
   <meta name="author" content="hriccio@codingzen.org">
-  <meta property="og:image" content="https://codingzen.org/images/codingzen_facebook_201809.png" />
-  <link rel="icon" href="images/favicon.png">
-  <title>codingzen | AI-assisted game lab</title>
+  <meta property="og:image" content="https://codingzen.org/images/brand/social-preview.png" />
+  <link rel="icon" type="image/svg+xml" href="images/brand/codingzen-flow-favicon-dark.svg">
+  <link rel="alternate icon" href="images/brand/codingzen-flow-favicon-dark.ico">
+  <link rel="apple-touch-icon" href="images/brand/codingzen-flow-apple-touch-icon-dark-180.png">
+  <link rel="canonical" href="https://codingzen.org/">
+  <meta name="theme-color" content="#101B15">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://codingzen.org/">
+  <meta property="og:title" content="codingzen | Simulations, systems, and visualizations">
+  <meta property="og:description" content="Interactive experiments, simulations, visualizations, and playable projects.">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="codingzen Flow logo — Simulations, systems, and visualizations">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="codingzen | Simulations, systems, and visualizations">
+  <meta name="twitter:description" content="Interactive experiments, simulations, visualizations, and playable projects.">
+  <meta name="twitter:image" content="https://codingzen.org/images/brand/social-preview.png">
+  <meta name="twitter:image:alt" content="codingzen Flow logo — Simulations, systems, and visualizations">
+  <title>codingzen | Simulations, systems, and visualizations</title>
   <link rel="stylesheet" href="main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,15 +39,20 @@
   <![endif]-->
 
   <a class="world-brand" href="#site" aria-label="codingzen home">
-      <img class="logo" src="images/path4240_1.png" alt="codingzen mark">
-      <span>codingzen</span>
+      <img class="logo" src="images/brand/codingzen-flow-wordmark-offwhite.svg" alt="codingzen" width="1089" height="281">
   </a>
   <div id="site">
     <main>
       <section class="world-shell" id="world-map" aria-labelledby="world-map-title">
         <div class="world-copy">
-          <div class="eyebrow">AI-assisted game lab</div>
-          <h1 id="world-map-title">codingzen overworld</h1>
+          <div class="eyebrow">Explore codingzen</div>
+          <h1>Simulations, systems, and visualizations</h1>
+          <p class="brand-intro">Interactive experiments, simulations, visualizations, and playable projects.</p>
+          <nav class="channel-links" aria-label="Codingzen channels">
+            <a href="https://github.com/codingzenorg">GitHub · source code</a>
+            <a href="https://www.youtube.com/@coding-zen">YouTube · visualizations</a>
+          </nav>
+          <h2 id="world-map-title">Playable overworld</h2>
           <p>
             Browse playable prototypes as a low-poly game map. Pick a phase to inspect
             details, then open it when the path is unlocked.
@@ -44,8 +65,8 @@
         </div>
         <div class="world-stage">
           <div class="map-panel">
-            <canvas id="game-map" aria-label="3D low-poly gallery map"></canvas>
-            <div class="map-hint">Click a node, or use arrow keys and Enter.</div>
+            <canvas id="game-map" tabindex="0" aria-label="Playable project map" aria-describedby="map-instructions"></canvas>
+            <div class="map-hint" id="map-instructions">Click a node, or focus the map and use arrow keys + Enter.</div>
           </div>
           <aside class="phase-panel" aria-live="polite">
             <div class="phase-status" id="phase-status">playable</div>
@@ -64,7 +85,7 @@
               </div>
               <div>
                 <dt>source</dt>
-                <dd><a id="phase-github" href="https://github.com/codingzenorg/site/tree/master/apps/shesha" target="_blank" rel="noopener noreferrer">github</a></dd>
+                <dd><a id="phase-github" href="https://github.com/codingzenorg/shesha" target="_blank" rel="noopener noreferrer">github</a></dd>
               </div>
             </dl>
             <a class="button primary phase-open" id="phase-open" href="apps/shesha/">open phase</a>
