@@ -715,6 +715,7 @@ a:focus-visible,
 }
 
 .world-shell {
+  grid-column: 1 / -1;
   width: 100%;
 }
 
